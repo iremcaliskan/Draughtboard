@@ -4,16 +4,16 @@ using System.Windows.Forms;
 
 namespace Draughtboard
 {
-    public partial class Form1 : Form //Inheritance
+    public partial class Form1 : Form // Form1 extends Form (Inheritance)
     {
         public Form1()
         {
-            InitializeComponent(); //Constructor
+            InitializeComponent(); // Constructor(yapıcı metot)
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GenerateButtons(); //Metod olarak çağırdık
+            GenerateButtons(); // Metod olarak çağırdık
         }
 
         private void GenerateButtons()
@@ -40,7 +40,6 @@ namespace Draughtboard
                     else
                     {
                         buttons[i, j].BackColor = Color.White;
-
                     }
                     this.Controls.Add(buttons[i, j]); // Button'u ekrana koyar.
                 }
