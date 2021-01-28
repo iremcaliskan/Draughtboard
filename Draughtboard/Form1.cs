@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Draughtboard
@@ -19,8 +13,7 @@ namespace Draughtboard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GenerateButtons();
-
+            GenerateButtons(); //Metod olarak çağırdık
         }
 
         private void GenerateButtons()
@@ -38,8 +31,8 @@ namespace Draughtboard
                     buttons[i, j].Height = 50;
                     buttons[i, j].Left = left;
                     left += 50;
-                    buttons[i, j].Top = top
-                        ;
+                    buttons[i, j].Top = top;
+
                     if ((i + j) % 2 == 0)
                     {
                         buttons[i, j].BackColor = Color.Black;
@@ -51,8 +44,8 @@ namespace Draughtboard
                     }
                     this.Controls.Add(buttons[i, j]); // Button'u ekrana koyar.
                 }
-                left = 0; // Diğer satıra geçildiğinde sola geçmesi için sıfırlanması gerekiyor.
-                top += 50; // Diğer satıra geçildiğinde aşağıya geçilmesi için arttırılması gerekiyor.x
+                left = 0; // Diğer satıra geçildiğinde sola geçilmesi için sıfırlanması gerekir.
+                top += 50; // Diğer satıra geçildiğinde aşağıya geçilmesi için arttırılması gerekir.
             }
         }
     }
